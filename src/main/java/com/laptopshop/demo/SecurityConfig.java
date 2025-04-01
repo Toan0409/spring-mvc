@@ -10,10 +10,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()) // Cho phép tất cả request
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()) 
                 .csrf(csrf -> csrf.disable()) // Tắt CSRF
-                .formLogin(form -> form.disable()) // Tắt form login
-                .httpBasic(basic -> basic.disable()); // Tắt Basic Auth
+                .formLogin(form -> form.disable()) 
+                .httpBasic(basic -> basic.disable()); 
         return http.build();
     }
 }
